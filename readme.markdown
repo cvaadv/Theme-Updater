@@ -1,6 +1,6 @@
 # Wordpress plugin: a theme updater for GitHub-hosted Wordpress themes
 
-NOTE: This fork allows this plugin to work with branches of a template repo. See my commit message.
+## NOTE: This fork allows this plugin to work with branches of a template repo. See my commit message.
 
 Do you wish that you could somehow get update notifications within WordPress for _custom_ themes that you use for your site? Perhaps a custom theme that you had developed specifically for your site? Or a theme you developed for a client site?  And do you wish you could do "automatic updates" to those custom themes just like you can for _public_ themes available from WordPress.org?
 
@@ -43,7 +43,7 @@ Example header:
     Github Theme URI: https://github.com/username/repo
     Description: My Example Theme
     Author: person
-    Version: v1.0.0
+    Version: v1.0.0/branch
 
 Push these changes back to the project.
 
