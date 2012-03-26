@@ -33,7 +33,7 @@ function transient_update_themes_filter($data){
 		}
 		
 		$theme['Github Theme URI'] = $theme_data['Github Theme URI'];
-		$version = explode("/", $theme['Version']); // get the version from the style.css file
+		$version = explode("-", $theme['Version']);
 		$theme_key = $theme['Stylesheet'];
 		
 		// Add Github Theme Updater to return $data and hook into admin
@@ -96,14 +96,14 @@ function transient_update_themes_filter($data){
 		
 		// check and generate download link
 		$newest_tag = array_pop($tags);
-		if(version_compare($version[0],  $newest_tag, '>=')){ // compare versions (use the first value in the version array)
+		if(version_compare($version[0],  $newest_tag, '>')){
 			// up-to-date!
 			$data->up_to_date[$theme_key]['rollback'] = $tags;
 			continue;
 		}
 		
 		// new update available, add to $data
-		$download_link = $theme['Github Theme URI'] . '/zipball/' . $version[1] . '/' . $newest_tag; // get the branch (second value in the version array)
+		$download_link = $theme['Github Theme URI'] . '/zipball/' . $version[1] . '/' . $newest_tag;
 		$update = array();
 		$update['new_version'] = $newest_tag;
 		$update['url']         = $theme['Github Theme URI'];
