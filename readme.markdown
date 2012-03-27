@@ -43,7 +43,7 @@ Example header:
     Github Theme URI: https://github.com/username/repo
     Description: My Example Theme
     Author: person
-    Version: v1.0.0/branch
+    Version: v1.0.0-branch
 
 Push these changes back to the project.
 
@@ -86,7 +86,7 @@ The process of updating your theme and generating auto-update notifications is n
 
 ### 4 - Create a new tag and push the change back to the repo
 
-    $ git tag v1.1.0
+    $ git tag v1.1.0-branch
     $ git push origin v1.1.0
 
 Note, you should use the **identical** number for the tag that you did for a version number in `style.css` in step #2. 
